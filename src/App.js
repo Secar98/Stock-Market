@@ -4,8 +4,11 @@ import NavLinkItem from './components/NavLinkItem'
 import CryptoDetailPage from './pages/CryptoDetailPage'
 import CryptoPage from './pages/CryptoPage'
 import CurrenciesPage from './pages/CurrenciesPage'
+import CurrenciesDetailPage from './pages/CurrenciesDetailPage'
 import IndexesPage from './pages/IndexesPage'
+import IndexesDetailPage from './pages/IndexesDetailPage'
 import MarketsPage from './pages/MarketsPage'
+import MarketsDetailPage from './pages/MarketsDetailPage'
 
 function App() {
 
@@ -23,9 +26,6 @@ function App() {
     <div className="container">
       <ul>
         <li>
-          <NavLinkItem to="/" text="Home" />
-        </li>
-        <li>
           <NavLinkItem to="/Crypto" text="Crypto" />
         </li>  
         <li>
@@ -41,16 +41,19 @@ function App() {
         <Switch>
           <Route path="/Crypto/:id" component={CryptoDetailPage}/>
           <Route path="/Crypto">
-            <CryptoPage api={list && list.crypto}/>
+            <CryptoPage api={list && list.crypto} />
           </Route>
+          <Route path="/Currencies/:id" component={CurrenciesDetailPage} />
           <Route path="/Currencies">
-            <CurrenciesPage api={list && list.currencies}/>
+            <CurrenciesPage api={list && list.currencies} />
           </Route>
+          <Route path="/Indexes/:id" component={IndexesDetailPage} />
           <Route path="/Indexes">
-            <IndexesPage api={list && list.indexes}/>
+            <IndexesPage api={list && list.indexes} />
           </Route>
+          <Route path="/Markets/:id" component={MarketsDetailPage} />
           <Route path="/Markets">
-            <MarketsPage api={list && list.markets}/>
+            <MarketsPage api={list && list.markets} />
 		      </Route>
           <Route path="/"></Route>
         </Switch>

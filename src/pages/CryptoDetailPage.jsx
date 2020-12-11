@@ -13,10 +13,16 @@ export default function CryptoDetailPage(props) {
         .then(data => setList(data))
         
     }, [])
-    console.log(list);
+    console.log(Object.entries(list));
 
     return (
         <div>
+            <h2>Crypto details page</h2>
+            {Object.entries(list).map( item => {
+                return <p>{item[0]} : {item[1]} </p>
+            } )}
+            
+            {/* <p>{props.match.params.id}</p>
             <p>{list.link}</p>
             <p>{list.market}</p>
             <p>{list.name}</p>
@@ -24,7 +30,7 @@ export default function CryptoDetailPage(props) {
             <p>{list.price}</p>
             <p>{list.source}</p>
             <p>{list.ticker}</p>
-            <p>{list.today}</p>
+            <p>{list.today}</p> */}
         </div>
     )
 }

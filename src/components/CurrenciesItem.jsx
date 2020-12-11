@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function CryptoItem({value}) {
+export default function CurrenciesItem({value}) {
     return (
         <div className="row">
             <div>
-                <Link className="btn btn-secondary mb-2" to={`/Crypto/${value.ticker}`}>
+                <Link className="btn btn-secondary mb-2" to={`/Currencies/${value.ticker}`}>
                     {value.ticker}
                 </Link>
             </div>
