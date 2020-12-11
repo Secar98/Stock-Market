@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 import {Switch, Route} from 'react-router-dom'
 import NavLinkItem from './components/NavLinkItem'
 import CryptoPage from './pages/CryptoPage'
@@ -7,6 +7,17 @@ import IndexesPage from './pages/IndexesPage'
 import MarketsPage from './pages/MarketsPage'
 
 function App() {
+
+  const [list, setList] = useState({})
+   useEffect( () => {
+    const url ="https://market-data-collector.firebaseio.com/market-collector.json"
+
+    fetch(url)
+    .then(response => response.json())
+    .then(data => setList(data))
+
+  }, [])
+
   return (
     <div className="container">
       <ul>
@@ -28,16 +39,16 @@ function App() {
       </ul>
         <Switch>
           <Route path="/Crypto">
-            <CryptoPage />
+            <CryptoPage api={list && list.crypto}/>
           </Route>
           <Route path="/Currencies">
-            <CurrenciesPage />
+            <CurrenciesPage api={list && list.currencies}/>
           </Route>
           <Route path="/Indexes">
-            <IndexesPage />
+            <IndexesPage api={list && list.indexes}/>
           </Route>
           <Route path="/Markets">
-            <MarketsPage />
+            <MarketsPage api={list && list.markets}/>
 		      </Route>
           <Route path="/"></Route>
         </Switch>
