@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import {Switch, Route} from 'react-router-dom'
 import NavLinkItem from './components/NavLinkItem'
+import CryptoDetailPage from './pages/CryptoDetailPage'
 import CryptoPage from './pages/CryptoPage'
 import CurrenciesPage from './pages/CurrenciesPage'
 import IndexesPage from './pages/IndexesPage'
@@ -38,6 +39,7 @@ function App() {
         </li>  
       </ul>
         <Switch>
+          <Route path="/Crypto/:id" component={CryptoDetailPage}/>
           <Route path="/Crypto">
             <CryptoPage api={list && list.crypto}/>
           </Route>
