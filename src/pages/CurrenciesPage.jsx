@@ -2,7 +2,7 @@ import React from 'react'
 import CurrenciesItem from '../components/CurrenciesItem';
 
 export default function CurrenciesPage({api}) {
-    api && console.log(api);
+
     return (
         <div>
             {api && Object.entries(api.sek).map( item => {
