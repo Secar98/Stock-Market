@@ -9,6 +9,7 @@ import IndexesPage from './pages/IndexesPage'
 import IndexesDetailPage from './pages/IndexesDetailPage'
 import MarketsPage from './pages/MarketsPage'
 import MarketsDetailPage from './pages/MarketsDetailPage'
+import MarketsStockDetailPage from './pages/MarketsStockDetailPage'
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/Indexes">
             <IndexesPage api={list && list.indexes} />
           </Route>
+          <Route path="/Markets/:id/:id2" component={MarketsStockDetailPage} />
           <Route path="/Markets/:id" component={MarketsDetailPage} />
           <Route path="/Markets">
             <MarketsPage api={list && list.markets} />
