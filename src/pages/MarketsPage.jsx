@@ -5,9 +5,9 @@ export default function MarketsPage({api}) {
     api && console.log(api);
     return (
         <div className="col-12">
-            {api && Object.entries(api).map( item => {
+            {api && Object.entries(api).map( (item, index) => {
 
-                return <Link className="btn btn-secondary mb-2" to={`/Markets/${item[0]}`}>
+                return <Link key={index} className="btn btn-secondary mb-2" to={`/Markets/${item[0]}`}>
                     {item[0]}
                 </Link>
             })}

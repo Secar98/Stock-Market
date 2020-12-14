@@ -12,13 +12,13 @@ export default function MarketsStockDetailPage(props) {
         fetch(url)
         .then(response => response.json())
         .then(data => setList(data))
-    })
+    }, [])
 
    list && console.log(list);
     return (
         <div>
-         {list && Object.entries(list).map( item => {
-             return <p>{item[0]} : {item[1]}</p>
+         {list && Object.entries(list).map( (item, index) => {
+             return <p key={index}> {item[0]} : {item[1]}</p>
          })}
         </div>
     )

@@ -15,8 +15,8 @@ export default function IndexesDetailPage(props) {
 
     return (
         <div>
-            {Object.entries(list).map( item => {
-                return <p>{item[0]} : {item[1]}</p>
+            {Object.entries(list).map( (item, index) => {
+                return <p key={index}>{item[0]} : {item[1]}</p>
             })}
         </div>
     )

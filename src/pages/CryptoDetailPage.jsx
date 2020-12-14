@@ -18,19 +18,10 @@ export default function CryptoDetailPage(props) {
     return (
         <div>
             <h2>Crypto details page</h2>
-            {Object.entries(list).map( item => {
-                return <p>{item[0]} : {item[1]} </p>
+            {Object.entries(list).map( (item, index) => {
+                return <p key={index}>{item[0]} : {item[1]} </p>
             } )}
             
-            {/* <p>{props.match.params.id}</p>
-            <p>{list.link}</p>
-            <p>{list.market}</p>
-            <p>{list.name}</p>
-            <p>{list.omni_ticker}</p>
-            <p>{list.price}</p>
-            <p>{list.source}</p>
-            <p>{list.ticker}</p>
-            <p>{list.today}</p> */}
         </div>
     )
 }

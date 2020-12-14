@@ -18,9 +18,9 @@ export default function MarketsDetailPage(props) {
     console.log(list);
     return (
         <div>
-            {list && Object.entries(list).map( item => {
+            {list && Object.entries(list).map( (item, index) => {
 
-                return <Link to={`/markets/${id}/${item[0]}`}>
+                return <Link key={index} to={`/markets/${id}/${item[0]}`}>
                     {item[0]}
                 </Link>
             })}
