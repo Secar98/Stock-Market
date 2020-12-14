@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react'
 
+/*
+Takes props from routes in APP.js
+useEffect => fetch
+    URL takes ID from props.match.params.id
+
+Converts object to array
+map over array
+    return p-tag with array-content
+
+*/
+
 export default function MarketsStockDetailPage(props) {
     const [list, setList] = useState({})
     console.log(props);

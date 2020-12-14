@@ -1,6 +1,15 @@
 import React from 'react'
 import CryptoItem from '../components/CryptoItem';
 
+/*
+Takes API from APP.JS and deconstructs
+
+Converts API object to Array via Object.entries(variable/object)
+Then maps over api.usd and returns CryptoiItem component
+key == name of instrument
+value == instrument object
+*/
+
 export default function CryptoPage({api}) {
   
     return (

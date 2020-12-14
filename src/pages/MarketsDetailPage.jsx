@@ -1,6 +1,16 @@
 import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
+/*
+Takes props from routes in APP.js
+useEffect => fetch
+    URL takes ID from props.match.params.id
+
+Converts object to array
+map over array
+    return link-tag to markets/marketsdetailspage/marketsstockdetailpage
+
+*/
 
 export default function MarketsDetailPage(props) {
     const [list, setList] = useState({})

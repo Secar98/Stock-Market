@@ -1,6 +1,12 @@
 import React, {useState, useEffect} from 'react'
 
+/*
+Takes props from routes in APP.js
+useEffect => fetch
+    URL takes ID from props.match.params.id
 
+
+*/
 
 export default function CryptoDetailPage(props) {
     const [list, setList] = useState({})
@@ -13,7 +19,6 @@ export default function CryptoDetailPage(props) {
         .then(data => setList(data))
         
     }, [])
-    console.log(Object.entries(list));
 
     return (
         <div>

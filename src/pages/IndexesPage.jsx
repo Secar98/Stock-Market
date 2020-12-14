@@ -1,8 +1,17 @@
 import React from 'react'
 import IndexesItem from '../components/IndexesItem';
 
+/*
+Takes API from APP.JS and deconstructs
+
+Converts API object to Array via Object.entries(variable/object)
+Then maps over api.usd and returns CryptoiItem component
+key == name of instrument
+value == instrument object
+*/
+
 export default function IndexesPage({api}) {
-    api && console.log(Object.entries(api.se)); 
+   
     return (
         <div>
             {api && Object.entries(api.se).map( item => {

@@ -1,8 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+/*
+Takes API from APP.JS and deconstructs
+
+Converts API object to Array via Object.entries(variable/object)
+Then maps over api.usd and returns Link to detail page
+index == Array with 2 indexpositions
+
+key == index 
+item[0] == Name of specific stock market
+*/
+
 export default function MarketsPage({api}) {
-    api && console.log(api);
+
     return (
         <div className="col-12">
             {api && Object.entries(api).map( (item, index) => {
