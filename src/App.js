@@ -24,21 +24,24 @@ function App() {
   }, [])
 
   return (
-    <div className="container">
-      <ul>
-        <li>
-          <NavLinkItem to="/Crypto" text="Crypto" />
-        </li>  
-        <li>
-          <NavLinkItem to="/Currencies" text="Currencies" />
-        </li>  
-        <li>
-          <NavLinkItem to="/Indexes" text="Indexes" />
-         </li>  
-        <li>
-          <NavLinkItem to="/Markets" text="Markets" />
-        </li>  
-      </ul>
+    <div className="container-fluid">
+      <nav className="navbar navbar-expand-xs navbar-light bg-light p-4 mb-5" >
+        
+        <p className="nav-item mb-0">
+          <NavLinkItem className="nav-link" to="/Crypto" text="Crypto" />
+        </p>  
+        <p className="nav-item mb-0">
+          <NavLinkItem className="nav-link" to="/Currencies" text="Currencies" />
+        </p>  
+        <p className="nav-item mb-0">
+          <NavLinkItem className="nav-link" to="/Indexes" text="Indexes" />
+         </p>  
+        <p className="nav-item mb-0">
+          <NavLinkItem className="nav-link" to="/Markets" text="Markets" />
+        </p>  
+    
+       
+      </nav>
         <Switch>
           <Route path="/Crypto/:id" component={CryptoDetailPage}/>
           <Route path="/Crypto">

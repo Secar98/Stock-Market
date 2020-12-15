@@ -20,13 +20,24 @@ export default function CryptoDetailPage(props) {
         
     }, [])
 
+   
+
     return (
-        <div>
-            <h2>Crypto details page</h2>
-            {Object.entries(list).map( (item, index) => {
-                return <p key={index}>{item[0]} : {item[1]} </p>
+
+        <div className="card mx-auto" style={{width: "18rem"}}>
+            <div className="card-body">
+                
+                <h3 className="card-title">{list.name}</h3>
+                <div className="card-text">
+                    <p> market: {list.market}</p>
+                    <p> today: {list.today}</p>
+                    <p> price: {list.price}</p>
+                </div>
+            </div>
+           { /*{Object.entries(list).map( (item, index) => {
+                return <div className="card-text" key={index}>{item[0]} : {item[1]} </div>
             } )}
-            
+        */}
         </div>
     )
 }

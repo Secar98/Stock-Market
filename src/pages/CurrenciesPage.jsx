@@ -13,7 +13,7 @@ value == instrument object
 export default function CurrenciesPage({api}) {
 
     return (
-        <div>
+        <div className="row mt-5 justify-content-center">
             {api && Object.entries(api.sek).map( item => {
                 const key = item[0]
                 const value = item[1]

@@ -27,10 +27,10 @@ export default function MarketsDetailPage(props) {
     }, [])
     console.log(list);
     return (
-        <div>
+        <div className="row mt-5 justify-content-center">
             {list && Object.entries(list).map( (item, index) => {
 
-                return <Link key={index} to={`/markets/${id}/${item[0]}`}>
+                return <Link className="col-3 border m-4 p-4" key={index} to={`/markets/${id}/${item[0]}`}>
                     {item[1].name} 
                 </Link>
             })}

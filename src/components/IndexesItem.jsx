@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 export default function IndexesItem({value}) {
     return (
-        <div>
-            <Link className="btn btn-secondary mb-2" to={`/indexes/${value.ticker}`}>
+        <div className="col-3 border m-4 p-4">
+            <Link  to={`/indexes/${value.ticker}`}>
                 {value.name}    
             </Link> 
         </div>
