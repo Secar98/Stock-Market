@@ -24,10 +24,16 @@ export default function IndexesDetailPage(props) {
     }, [])
 
     return (
-        <div>
+        <div className="container">
+            <h2>{list.name}</h2>
             {Object.entries(list).map( (item, index) => {
-                return <p key={index}>{item[0]} : {item[1]}</p>
+                return(
+                    <ul className="list-group my-3">
+                        <li className="list-group-item" key={index}>{item[0]} : {item[1]} </li>
+                    </ul>
+                )
             })}
+
         </div>
     )
 }
