@@ -6,7 +6,7 @@ export default function CurrenciesItem({value}) {
         <div className="row">
             <div>
                 <Link className="btn btn-secondary mb-2" to={`/Currencies/${value.ticker}`}>
-                    {value.ticker}
+                    {value.name}
                 </Link>
             </div>
         </div>

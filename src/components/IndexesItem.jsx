@@ -5,7 +5,7 @@ export default function IndexesItem({value}) {
     return (
         <div>
             <Link className="btn btn-secondary mb-2" to={`/indexes/${value.ticker}`}>
-                {value.ticker}    
+                {value.name}    
             </Link> 
         </div>
     )

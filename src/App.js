@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from 'react'
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import NavLinkItem from './components/NavLinkItem'
 import CryptoDetailPage from './pages/CryptoDetailPage'
 import CryptoPage from './pages/CryptoPage'
@@ -57,7 +57,8 @@ function App() {
           <Route path="/Markets">
             <MarketsPage api={list && list.markets} />
 		      </Route>
-          <Route path="/"></Route>
+          <Route path="/" exact></Route>
+          <Route path="*"><Redirect to="/" /></Route>
         </Switch>
     </div>
   );

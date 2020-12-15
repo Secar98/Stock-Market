@@ -31,7 +31,7 @@ export default function MarketsDetailPage(props) {
             {list && Object.entries(list).map( (item, index) => {
 
                 return <Link key={index} to={`/markets/${id}/${item[0]}`}>
-                    {item[0]}
+                    {item[1].name} 
                 </Link>
             })}
         </div>
