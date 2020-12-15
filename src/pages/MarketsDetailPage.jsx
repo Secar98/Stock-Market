@@ -27,11 +27,14 @@ export default function MarketsDetailPage(props) {
     }, [])
     console.log(list);
     return (
-        <div>
+        <div className="container">
             {list && Object.entries(list).map( (item, index) => {
-
                 return <Link key={index} to={`/markets/${id}/${item[0]}`}>
-                    {item[1].name} 
+                    <ul className="m-2 list-group">
+                        <li className="list-group-item">
+                            {item[1].name}
+                        </li>
+                    </ul>
                 </Link>
             })}
         </div>

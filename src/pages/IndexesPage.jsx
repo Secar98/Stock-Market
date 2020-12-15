@@ -13,7 +13,7 @@ value == instrument object
 export default function IndexesPage({api}) {
    
     return (
-        <div>
+        <div className="container">
             {api && Object.entries(api.se).map( item => {
                 const key = item[0]
                 const value = item[1]

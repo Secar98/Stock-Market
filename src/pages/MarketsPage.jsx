@@ -15,11 +15,14 @@ item[0] == Name of specific stock market
 export default function MarketsPage({api}) {
 
     return (
-        <div className="col-12">
+        <div className="container">
             {api && Object.entries(api).map( (item, index) => {
-
-                return <Link key={index} className="btn btn-secondary mb-2" to={`/Markets/${item[0]}`}>
-                    {item[0]}
+                return <Link key={index} to={`/Markets/${item[0]}`}>
+                    <ul className="m-2 list-group">
+                        <li className="list-group-item">
+                            {item[0]}
+                        </li>
+                    </ul>
                 </Link>
             })}
         </div>
