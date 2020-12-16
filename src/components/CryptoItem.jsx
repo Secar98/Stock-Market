@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { BorderDiv } from '../Styles/PageStyle'
 
 export default function CryptoItem({value}) {
     return (
-        <div className="col-3 border m-4 p-4">
+        <BorderDiv className="col-2 m-4 p-4">
                
                     
                 <Link to={`/Crypto/${value.ticker}`}>
@@ -11,6 +12,6 @@ export default function CryptoItem({value}) {
                 </Link>
                
               
-        </div>
+        </BorderDiv>
     )
 }

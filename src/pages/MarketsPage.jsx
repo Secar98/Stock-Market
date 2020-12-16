@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { BorderDivMarket } from '../Styles/PageStyle'
 
 /*
 Takes API from APP.JS and deconstructs
@@ -15,13 +16,13 @@ item[0] == Name of specific stock market
 export default function MarketsPage({api}) {
 
     return (
-        <div className="row mt-5 justify-content-center">
+        <BorderDivMarket className="row mt-5 justify-content-center">
             {api && Object.entries(api).map( (item, index) => {
 
-                return <Link className="col-3 border m-4 p-4" key={index} to={`/Markets/${item[0]}`}>
+                return <Link className="col-2 m-4 p-4" key={index} to={`/Markets/${item[0]}`}>
                     {item[0]}
                 </Link>
             })}
-        </div>
+        </BorderDivMarket>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import { BorderDivMarket } from '../Styles/PageStyle';
 
 /*
 Takes props from routes in APP.js
@@ -27,13 +28,13 @@ export default function MarketsDetailPage(props) {
     }, [])
     console.log(list);
     return (
-        <div className="row mt-5 justify-content-center">
+        <BorderDivMarket className="row mt-5 justify-content-center">
             {list && Object.entries(list).map( (item, index) => {
 
-                return <Link className="col-3 border m-4 p-4" key={index} to={`/markets/${id}/${item[0]}`}>
+                return <Link className="col-2 m-4 p-4" key={index} to={`/markets/${id}/${item[0]}`}>
                     {item[1].name} 
                 </Link>
             })}
-        </div>
+        </BorderDivMarket>
     )
 }

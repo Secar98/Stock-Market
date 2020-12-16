@@ -10,6 +10,11 @@ import IndexesDetailPage from './pages/IndexesDetailPage'
 import MarketsPage from './pages/MarketsPage'
 import MarketsDetailPage from './pages/MarketsDetailPage'
 import MarketsStockDetailPage from './pages/MarketsStockDetailPage'
+import styled from 'styled-components'
+import { Container } from './Styles/HomeStyled'
+import { NavBar } from './Styles/HomeStyled'
+
+
 
 function App() {
 
@@ -24,8 +29,8 @@ function App() {
   }, [])
 
   return (
-    <div className="container-fluid">
-      <nav className="navbar navbar-expand-xs navbar-light bg-light p-4 mb-5" >
+    <Container className="container-fluid">
+    <NavBar className="navbar navbar-expand-xs p-4 mb-5" >
         
         <p className="nav-item mb-0">
           <NavLinkItem className="nav-link" to="/Crypto" text="Crypto" />
@@ -41,7 +46,7 @@ function App() {
         </p>  
     
        
-      </nav>
+      </NavBar>
         <Switch>
           <Route path="/Crypto/:id" component={CryptoDetailPage}/>
           <Route path="/Crypto">
@@ -63,7 +68,7 @@ function App() {
           <Route path="/" exact></Route>
           <Route path="*"><Redirect to="/" /></Route>
         </Switch>
-    </div>
+    </Container>
   );
 }
 
