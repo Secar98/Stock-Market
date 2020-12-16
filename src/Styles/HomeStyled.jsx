@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-background: #ffdfbe;
+background-image: linear-gradient(to bottom right,  #21a09a, #fffc66); 
 width: 100vw;
 min-height:100vh;
 max-height: 100%;
@@ -10,14 +10,15 @@ font-size:1.2rem;
 a{
     color:black;
     &:hover{
-        color:tomato;
+        color:#fffc66;
         text-decoration:none;
     }
+
 }
 `
 
 const NavBar = styled.nav `
-background: tomato;
+background: transparent
 
 `
 
@@ -28,7 +29,7 @@ const LinkStyle = styled.p `
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-weight: 800;
         &:hover{
-            color:#ffdfbe;
+            color:#fffc66
             text-decoration: none;
 
         }

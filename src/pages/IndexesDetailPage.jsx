@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import styled from 'styled-components'
+import {StyledCard} from '../Styles/PageStyle'
 
 /*
 Takes props from routes in APP.js
@@ -25,7 +27,7 @@ export default function IndexesDetailPage(props) {
 
  
   return (
-    <div className="card mx-auto" style={{ width: "18rem" }}>
+    <StyledCard className="card mx-auto" style={{ width: "18rem" }}>
       <div className="card-body">
         <h3 className="card-title">{list.name}</h3>
         <div className="card-text">
@@ -42,6 +44,6 @@ export default function IndexesDetailPage(props) {
       {/*Object.entries(list).map( (item, index) => {
                 return <p key={index}>{item[0]} : {item[1]}</p>
             })*/}
-    </div>
+    </StyledCard>
   );
 }
