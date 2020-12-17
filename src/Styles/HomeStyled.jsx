@@ -29,7 +29,7 @@ const LinkStyle = styled.p `
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-weight: 800;
         &:hover{
-            color:#fffc66
+            color:#fffc66;
             text-decoration: none;
 
         }

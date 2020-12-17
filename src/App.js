@@ -28,7 +28,7 @@ function App() {
     .then(response => response.json())
     .then(data => setList(data))
 
-  }, [])
+  },[])
 
   return (
     <Container className="container-fluid">
@@ -70,7 +70,7 @@ function App() {
           <Route path="/" exact></Route>
           <Route path="*"><Redirect to="/" /></Route>
         </Switch>
-        
+
     </Container>
   );
 }
