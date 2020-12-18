@@ -13,12 +13,12 @@ value == instrument object
 export default function CryptoPage({api}) {
   
     return (
-        <>
+        <div className="row mt-5 justify-content-center">
             {api && Object.entries(api.usd).map( item => {
                 const key = item[0]
                 const value = item[1]
                 return <CryptoItem key={key} value={value} />
             })}
-        </>
+        </div>
     )
 }

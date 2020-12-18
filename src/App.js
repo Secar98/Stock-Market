@@ -10,6 +10,13 @@ import IndexesDetailPage from './pages/IndexesDetailPage'
 import MarketsPage from './pages/MarketsPage'
 import MarketsDetailPage from './pages/MarketsDetailPage'
 import MarketsStockDetailPage from './pages/MarketsStockDetailPage'
+import styled from 'styled-components'
+import { Container } from './Styles/HomeStyled'
+import { NavBar } from './Styles/HomeStyled'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faGlobe, faStream, faCoins} from '@fortawesome/free-solid-svg-icons'
+import {faBtc} from '@fortawesome/free-brands-svg-icons'
+
 
 function App() {
 
@@ -21,24 +28,27 @@ function App() {
     .then(response => response.json())
     .then(data => setList(data))
 
-  }, [])
+  },[])
 
   return (
-    <div className="container">
-      <ul>
-        <li>
-          <NavLinkItem to="/Crypto" text="Crypto" />
-        </li>  
-        <li>
-          <NavLinkItem to="/Currencies" text="Currencies" />
-        </li>  
-        <li>
-          <NavLinkItem to="/Indexes" text="Indexes" />
-         </li>  
-        <li>
-          <NavLinkItem to="/Markets" text="Markets" />
-        </li>  
-      </ul>
+    <Container className="container-fluid">
+    <NavBar className="navbar navbar-expand-xs p-4 mb-5" >
+        <p className="nav-item mb-0">
+          <NavLinkItem className="nav-link" to="/Crypto" text="Crypto" icon={faBtc} />
+        </p>  
+        <p className="nav-item mb-0">
+          <NavLinkItem className="nav-link" to="/Currencies" text="Currencies" icon={faCoins} />
+        </p>  
+        <p className="nav-item mb-0">
+          <NavLinkItem className="nav-link" to="/Indexes" text="Indexes" icon={faStream} />
+         </p>  
+        <p className="nav-item mb-0">
+        
+          <NavLinkItem className="nav-link" to="/Markets" text="Markets" icon={faGlobe}/>
+        </p>  
+    
+      </NavBar>
+
         <Switch>
           <Route path="/Crypto/:id" component={CryptoDetailPage}/>
           <Route path="/Crypto">
@@ -60,7 +70,8 @@ function App() {
           <Route path="/" exact></Route>
           <Route path="*"><Redirect to="/" /></Route>
         </Switch>
-    </div>
+
+    </Container>
   );
 }
 
