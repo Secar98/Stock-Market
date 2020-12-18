@@ -45,6 +45,7 @@ export default function MarketsStockDetailPage(props) {
             <p> ytd: {list.ytd}</p>
             <p> market: {list.market}</p>
             <p> price: {list.price}</p>
+            <button onClick={()=> props.history.goBack()}>go back</button>
           </div>
         </div>
       )}
