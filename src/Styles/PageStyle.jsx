@@ -25,6 +25,13 @@ const StyledBadge = styled.span `
       color:red;
   }
 `
+const StyledButton = styled.button`
+    background: #21a09a;
+    color:#faf9c1;
+    font-family:inherit;
+    border: transparent;
+    border-radius: 5%;
+`
 
 
-export { BorderDiv, BorderDivMarket, StyledCard, StyledBadge};
+export { BorderDiv, BorderDivMarket, StyledCard, StyledBadge, StyledButton};

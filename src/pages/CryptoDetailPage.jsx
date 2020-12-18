@@ -33,7 +33,7 @@ export default function CryptoDetailPage(props) {
             <h3 className="card-title">{list.name}</h3>
             <div className="card-text">
               <p> market: {list.market}</p>
-              <p> today: {list.today}</p>
+              <p> today: {list.today}%</p>
               <p> price: {list.price}</p>
             </div>
           </div>

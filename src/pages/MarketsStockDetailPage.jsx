@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components'
-import {StyledCard} from '../Styles/PageStyle'
+import {StyledCard, StyledButton} from '../Styles/PageStyle'
 
 
 /*
@@ -37,15 +37,15 @@ export default function MarketsStockDetailPage(props) {
         <div className="card-body">
           <h3 className="card-title">{list.name}</h3>
           <div className="card-text">
-            <p> today: {list.today}</p>
-            <p> w1: {list.w1}</p>
-            <p> y3: {list.y3}</p>
-            <p> y5: {list.y5}</p>
-            <p> mtd: {list.mtd}</p>
-            <p> ytd: {list.ytd}</p>
+          <p> today: {list.today}%</p>
+            <p> w1: {list.w1}%</p>
+            <p> y3: {list.y3}%</p>
+            <p> y5: {list.y5}%</p>
+            <p> mtd: {list.mtd}%</p>
+            <p> ytd: {list.ytd}%</p>
             <p> market: {list.market}</p>
             <p> price: {list.price}</p>
-            <button onClick={()=> props.history.goBack()}>go back</button>
+            <StyledButton onClick={()=> props.history.goBack()}>go back</StyledButton>
           </div>
         </div>
       )}
