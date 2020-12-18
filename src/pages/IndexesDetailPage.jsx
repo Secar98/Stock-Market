@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from 'styled-components'
 import {StyledCard} from '../Styles/PageStyle'
-
+import boxicons from 'boxicons'
 /*
 Takes props from routes in APP.js
 useEffect => fetch

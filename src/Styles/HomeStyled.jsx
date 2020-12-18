@@ -15,17 +15,15 @@ a{
     }
 
     .nolink {
-        font-size:1rem;
-    
-       
-    }
-    
+    font-size:1rem;
 
+   
 }
-
+    
 
 }
 `
+
 
 const NavBar = styled.nav `
 background: transparent

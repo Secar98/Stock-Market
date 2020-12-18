@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from 'styled-components'
-import {StyledCard, StyledButton} from '../Styles/PageStyle'
-
+import { StyledCard, StyledButton } from "../Styles/PageStyle";
+import boxicons from 'boxicons'
 
 /*
 Takes props from routes in APP.js
@@ -28,16 +27,15 @@ export default function MarketsStockDetailPage(props) {
       .then((data) => setList(data));
   }, []);
 
-  
   return (
     <StyledCard className="card mx-auto" style={{ width: "18rem" }}>
-       {!list ? (
+      {!list ? (
         <box-icon name="loader" animation="spin" size="lg"></box-icon>
       ) : (
         <div className="card-body">
           <h3 className="card-title">{list.name}</h3>
           <div className="card-text">
-          <p> today: {list.today}%</p>
+            <p> today: {list.today}%</p>
             <p> w1: {list.w1}%</p>
             <p> y3: {list.y3}%</p>
             <p> y5: {list.y5}%</p>
@@ -45,7 +43,9 @@ export default function MarketsStockDetailPage(props) {
             <p> ytd: {list.ytd}%</p>
             <p> market: {list.market}</p>
             <p> price: {list.price}</p>
-            <StyledButton onClick={()=> props.history.goBack()}>go back</StyledButton>
+            <StyledButton onClick={() => props.history.goBack()}>
+              go back
+            </StyledButton>
           </div>
         </div>
       )}

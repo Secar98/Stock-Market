@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { BorderDiv, BorderDivMarket } from "../Styles/PageStyle";
-import { StyledBadge, StyledHeader } from "../Styles/PageStyle";
+import { BorderDiv} from "../Styles/PageStyle";
+import { StyledBadge } from "../Styles/PageStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import boxicons from 'boxicons'
 /*
 Takes props from routes in APP.js
 useEffect => fetch

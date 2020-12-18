@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { StyledCard } from "../Styles/PageStyle";
-import boxicons from "boxicons";
+
 /*
 Takes props from routes in APP.js
 useEffect => fetch
@@ -20,8 +19,6 @@ export default function CryptoDetailPage(props) {
       .then((response) => response.json())
       .then((data) => setList(data));
   }, []);
-
-  console.log(list)
 
   return (
     <>
