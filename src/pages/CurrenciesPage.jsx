@@ -14,11 +14,13 @@ export default function CurrenciesPage({api}) {
 
     return (
         <div className="container">
-            {api && Object.entries(api.sek).map( item => {
-                const key = item[0]
-                const value = item[1]
-                return <CurrenciesItem key={key} value={value} />
-            })}
+            <ul className="m-2 list-group">
+                {api && Object.entries(api.sek).map( item => {
+                    const key = item[0]
+                    const value = item[1]
+                    return <CurrenciesItem key={key} value={value} />
+                })}
+            </ul>
         </div>
     )
 }

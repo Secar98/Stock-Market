@@ -14,11 +14,13 @@ export default function CryptoPage({api}) {
   
     return (
         <div className="container">
-            {api && Object.entries(api.usd).map( item => {
-                const key = item[0]
-                const value = item[1]
-                return <CryptoItem key={key} value={value} />
-            })}
+            <ul className="m-2 list-group">
+                {api && Object.entries(api.usd).map( item => {
+                    const key = item[0]
+                    const value = item[1]
+                    return <CryptoItem key={key} value={value} />
+                })}
+            </ul>
         </div>
     )
 }
