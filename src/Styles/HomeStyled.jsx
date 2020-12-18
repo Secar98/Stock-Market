@@ -14,6 +14,16 @@ a{
         text-decoration:none;
     }
 
+    .nolink {
+        font-size:1rem;
+    
+       
+    }
+    
+
+}
+
+
 }
 `
 

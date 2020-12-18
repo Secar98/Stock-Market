@@ -7,6 +7,7 @@ const BorderDiv = styled.div`
 const BorderDivMarket = styled.div`
   a {
     border: 1px solid black;
+   
   }
 `;
 const StyledCard = styled.div`
@@ -32,6 +33,9 @@ const StyledButton = styled.button`
     border: transparent;
     border-radius: 5%;
 `
+const StyledHeader = styled.h3`
+    margin-left:7.5rem;
+`
 
 
-export { BorderDiv, BorderDivMarket, StyledCard, StyledBadge, StyledButton};
+export { BorderDiv, BorderDivMarket, StyledCard, StyledBadge, StyledButton, StyledHeader};

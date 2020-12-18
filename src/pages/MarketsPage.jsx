@@ -20,7 +20,7 @@ export default function MarketsPage({api}) {
             {api && Object.entries(api).map( (item, index) => {
 
                 return <Link className="col-2 m-4 p-4" key={index} to={`/Markets/${item[0]}`}>
-                    {item[0]}
+                    <h4>{item[0]}</h4>
                 </Link>
             })}
         </BorderDivMarket>
